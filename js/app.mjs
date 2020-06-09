@@ -7,10 +7,12 @@ import { init as mainTodo } from "./src/mainTodo.mjs";
 import { init as subTodos } from "./src/subTodos.mjs";
 
 window.onload = () => {
+  //동욱
+  initBackground();
+  initWeather();
+
   initClock();
   initQuote();
-  initWeather();
-  initBackground();
   greeting();
   mainTodo();
   subTodos();

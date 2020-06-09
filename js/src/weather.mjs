@@ -106,7 +106,6 @@ const template = new Template();
 
 // functions
 const render = () => {
-  console.log(3, 6);
   state = JSON.parse(localStorage.getItem("weatherState"));
   template.init();
   template.current();
@@ -170,7 +169,6 @@ const successToLocate = async (response) => {
 const failtoLocate = (e) => console.log("rejected to locate :" + e);
 
 const initWeather = async () => {
-  console.log(0);
   if (!state) await getData();
   /*초기표시*/
   render();

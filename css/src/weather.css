@@ -11,7 +11,7 @@
 
 /* 모달창 */
 .selected-forecast {
-  z-index: 3;
+  z-index: 1;
   position: absolute;
   top: 90px;
   right: 10px;
@@ -21,7 +21,7 @@
   border-radius: 5px;
   background-color: rgba(32, 32, 32, 0.95);
 
-  /* display: none; */
+  opacity: 0;
   transform: translate3d(3px, -3px, 0);
   transition: all ease-in-out 180ms;
 }
@@ -93,6 +93,6 @@
 
 /* EVENT DRIVEN */
 .weather-active {
-  display: block;
+  opacity: 1;
   transform: translate3d(0, 0, 0);
 }

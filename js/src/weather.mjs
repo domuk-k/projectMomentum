@@ -177,15 +177,14 @@ const initWeather = async () => {
   /*정보동의-응답수신하면, 실제 위치 데이터로 다시 랜더링*/
   askLocation();
 };
-
 window.onclick = ({ target }) => {
   if (!target.matches(".location")) return;
   const $modal = document.querySelector(".selected-forecast");
   $modal.classList.toggle("weather-active");
 };
 
-window.onclick = ({ target }) => {
-  if (!target.matches(".item-temp-high")) return;
+$layoutWeather.onclick = ({ target }) => {
+  if (!target.matches(".forecast-item")) return;
   template.selected(target.id);
 };
 

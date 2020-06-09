@@ -2,6 +2,7 @@
 @import "./font-face/font-meteocons.css";
 
 /* modules */
+@import "./src/clock-quote.css";
 @import "./src/layout.css";
 @import "./src/background.css";
 @import "./src/weather.css";

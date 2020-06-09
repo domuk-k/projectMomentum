@@ -1,5 +1,6 @@
 /*clock*/
 #layout-clock{
+    user-select : none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,58 +8,93 @@
 
 .clock-digital, .clock-percent{
     font-size: 1050%;
+    transform: translate3d(20px, 0, 0);
 }
 
 
 /*clock-button*/
-.clock-toggle-btn::before{  
-    content:"\f362";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: grey;
-    font-size: 120%;
-    
-    
-}
 
 .clock-toggle-btn {
     height: 40px;
     width: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     border-style: none;
     cursor: pointer;
     outline: none;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+    transition: all 0.4s;
+    z-index: 4;
+    
+}
+.clock-toggle-btn::before{  
+    content:"\f362";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 120%;
 }
 
 .clock-active{
     display: none;
 }
 
+#layout-clock:hover .clock-toggle-btn{
+    opacity: 1;
+};
+
+.clock-toggle-btn:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 /*quote*/
+#layout-quote{
+    user-select : none;
+}
+
 .quote-text{
+    transition: all 1s;
     font-size: 18px;
 }
 
 .quote-author{
     transition: all 2s;
-    font-size: 14px;
+    font-size: 15px;
     opacity: 0;
-    transform: translateY(-20px);
-}
-
-.quote-alter-btn{
-    display: inline;
+    transform: translate3d(0, -20px, 0);
 }
 
 #layout-quote:hover > .quote-text{
     transition: all 1s;
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
 }
 
 #layout-quote:hover > .quote-author{
     transition: all 1s;
     display: block;
     opacity: 1;
-    transform: translateY(0px);
+    transform: translate3d(0, 0px, 0);
 }
 
+/* quote-button */
+.quote-alter-btn{
+    display: inline;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);   
+    transform: translate3d(0, 3px, 0);
+    z-index: 1;
+}
+.quote-alter-btn:hover{
+    transition: all 0.8s;
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+.quote-alter-btn::before{
+    content: "\f0e2";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 150%;
+}

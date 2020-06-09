@@ -45,6 +45,3 @@ $layoutClock.onclick = (e) => {
     if(!e.target.matches('button')) return 
     $layoutClock.querySelectorAll('div').forEach( clock => clock.classList.toggle('clock-active')); 
 }
-
-
-// window.onload = renderClock();
